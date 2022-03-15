@@ -12,7 +12,7 @@ ReactDOM.render(
     <App></App>
     <TodoComponent name = 'Carol' />
     <MyFuncComponent name = 'Mike' age = {27}/>
-    <NewClassComponent/>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
