@@ -89,49 +89,6 @@ class MyCalculator extends Component {
 }
 
 
-// addNumbers =() =>{
-//     var a, b, c;
-//     var a = Number(document.getElementById("number1").value);
-//     var b = Number(document.getElementById("number2").value);
-//     c = a + b;
-//     console.log('a(', a, ' ) + b(', b, ')= ', c)
-//     document.getElementById("answer").value = c;
-//     this.setState({
-//         answer: "45"
-//     })
 
-// }
-
-    
-    
-// function subNumbers(){
-//     var a, b, c;
-//     var a = Number(document.getElementById("number1").value);
-//     var b = Number(document.getElementById("number2").value);
-//     c = a - b;
-//     document.getElementById("answer").value = c;
-//     return c;
-
-// }
-    
-// function mutliNumbers(){
-//     var a, b, c;
-//     var a = Number(document.getElementById("number1").value);
-//     var b = Number(document.getElementById("number2").value);
-//     c = a * b;
-//     document.getElementById("answer").value = c;
-//     return c;
-
-// }
-
-// function divideNumbers(){
-//     var a, b, c;
-//     var a = Number(document.getElementById("number1").value);
-//     var b = Number(document.getElementById("number2").value);
-//     c = a / b;
-//     document.getElementById("answer").value = c;
-//     return c;
-
-// }
 
 export default MyCalculator;
