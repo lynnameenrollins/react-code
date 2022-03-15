@@ -5,6 +5,7 @@ class NewClassComponent extends Component {
         return (
             <div>
             <button type="button" onClick ={this.clickedButton} > Click me</button>
+            
             </div>
         );
     }

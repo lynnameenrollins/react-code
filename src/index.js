@@ -5,14 +5,18 @@ import App from './App';
 import {TodoComponent} from './component/ToDoComponent';
 import MyFuncComponent from './component/MyFuncComponent';
 import NewClassComponent from './component/NewClassComponent';
+import MyCalculator from './component/MyCalculator';
 import reportWebVitals from './reportWebVitals';
+import MyCalcForm from './component/MyCalcForm';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App></App>
+    {/* <App></App> */}
+    {/* <NewClassComponent/>
     <TodoComponent name = 'Carol' />
-    <MyFuncComponent name = 'Mike' age = {27}/>
-    
+    <MyFuncComponent name = 'Mike' age = {27}/> */}
+    <MyCalculator />
+
   </React.StrictMode>,
   document.getElementById('root')
 );
