@@ -15,8 +15,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React! It is fun!!
         </a>
+        <h1> This is Lynn adding a header</h1>
       </header>
     </div>
   );
