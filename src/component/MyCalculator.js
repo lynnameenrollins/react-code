@@ -5,9 +5,9 @@ class MyCalculator extends Component {
         super(props);
         this.state ={
             message: "Testing message",
-            number1: 0,
-            number2:0,
-            answer: 0
+            number1: "",
+            number2:"",
+            answer: ""
         };
     }
 
