@@ -6,7 +6,11 @@ import {TodoComponent} from './component/ToDoComponent';
 import MyFuncComponent from './component/MyFuncComponent';
 import NewClassComponent from './component/NewClassComponent';
 import MyCalculator from './component/MyCalculator';
+import Demo from './component/Demo';
+import EffectHookExample from './component/EffectHookExample';
+import EffectNew from './component/EffectNew.js';
 import reportWebVitals from './reportWebVitals';
+
 
 
 ReactDOM.render(
@@ -16,7 +20,9 @@ ReactDOM.render(
     <TodoComponent name = 'Carol' />
     <MyFuncComponent name = 'Mike' age = {27}/> */}
     <MyCalculator />
-
+    <Demo/>
+    <EffectHookExample/>
+    <EffectNew/>
   </React.StrictMode>,
   document.getElementById('root')
 );

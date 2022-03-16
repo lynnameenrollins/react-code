@@ -5,51 +5,60 @@ class MyCalculator extends Component {
         super(props);
         this.state ={
             message: "Testing message",
-            number1: 1,
-            number2:2,
-            answer: ""
+            number1: 0,
+            number2:0,
+            answer: 0
         };
     }
+
+    handleChange = () =>{
+        this.setState({number1:Number(document.getElementById("number1").value)});
+        this.setState({number2:Number(document.getElementById("number2").value)});  
+    }
     addNumbers =() =>{
-        var a, b, c;
-        var a = Number(document.getElementById("number1").value);
-        var b = Number(document.getElementById("number2").value);
-        
-        c = a + b
-        console.log('a(', a, ' ) + b(', b, ')= ', c)
+        // var a, b, c;
+        var c;
+        this.setState({number1:Number(document.getElementById("number1").value)});
+        this.setState({number2:Number(document.getElementById("number2").value)});
+   
+        c = this.state.number1 + this.state.number2
+        console.log('a(', this.state.number1, ' ) + b(', this.state.number2, ')= ', c)
         
         this.setState({
             answer: c
         });
     };
     subNumbers =() =>{
-        var a, b, c;
-        var a = Number(document.getElementById("number1").value);
-        var b = Number(document.getElementById("number2").value);
-        c = a - b;
-        console.log('a(', a, ' ) - b(', b, ')= ', c)
+        var c;
+        this.setState({number1:Number(document.getElementById("number1").value)});
+        this.setState({number2:Number(document.getElementById("number2").value)});
+   
+        c = this.state.number1 - this.state.number2
+        console.log('a(', this.state.number1, ' ) - b(', this.state.number2, ')= ', c)
         
         this.setState({
             answer: c
         });
     };
     mutliNumbers =() =>{
-        var a, b, c;
-        var a = Number(document.getElementById("number1").value);
-        var b = Number(document.getElementById("number2").value);
-        c = a * b;
-        console.log('a(', a, ' ) * b(', b, ')= ', c)
+        var c;
+        this.setState({number1:Number(document.getElementById("number1").value)});
+        this.setState({number2:Number(document.getElementById("number2").value)});
+   
+        c = this.state.number1 * this.state.number2
+        console.log('a(', this.state.number1, ' ) * b(', this.state.number2, ')= ', c)
         
         this.setState({
             answer: c
         });
     };
     divideNumbers =() =>{
-        var a, b, c;
-        var a = Number(document.getElementById("number1").value);
-        var b = Number(document.getElementById("number2").value);
-        c = a / b;
-        console.log('a(', a, ' ) / b(', b, ')= ', c)
+        var c;
+        this.setState({number1:Number(document.getElementById("number1").value)});
+        this.setState({number2:Number(document.getElementById("number2").value)});
+   
+        c = this.state.number1 / this.state.number2
+        console.log('a(', this.state.number1, ' ) / b(', this.state.number2, ')= ', c)
         
         this.setState({
             answer: c
@@ -59,6 +68,7 @@ class MyCalculator extends Component {
             
 
     render() {
+
         return (
             <div>
 
@@ -69,12 +79,12 @@ class MyCalculator extends Component {
             
                    
             <label>First Number: </label>
-            <input type="number" id="number1"></input>
+            <input type="number" id="number1" value={this.state.number1} onChange={this.handleChange} ></input>
             <p></p>
             <label>Second Number: </label>
-            <input type="number" id="number2"></input>
+            <input type="number" id="number2" value={this.state.number2} onChange={this.handleChange}></input>
             <p></p>
-            <button type="button" id ="buttonAdd" onClick={this.addNumbers}>Add</button>
+            <button type="button" id ="buttonAdd"  onClick={this.addNumbers}>Add</button>
             <button type="button" id ="buttonSub" onClick={this.subNumbers}>Subtract</button>
             <button type="button"  id ="buttonMulti"onClick={this.mutliNumbers}>Multiply</button>
             <button type="button" id ="buttonDivide" onClick={this.divideNumbers}>Divide </button>
