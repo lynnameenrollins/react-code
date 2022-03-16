@@ -4,7 +4,13 @@ function MyCalculatorFunction() {
     const [number1, setNumber1]= useState(5);
     const [number2, setNumber2]= useState(3);
     const [answer, setAnswer] = useState(0);
+    const [timer, setTimer] = useState(0)
   
+    useEffect(()=>{
+        setTimeout(()=>{
+            setTimer((count) => count +1);
+        }, 1000);
+});
     return(
         <div style={{backgroundColor :"#97a1e8"}}> 
             <h1 style={{backgroundColor :"#97a1e8", color:"#394280", fontStyle:"italic"}}>My Very Simple Calculator Using a Functional Component!</h1>
@@ -24,6 +30,7 @@ function MyCalculatorFunction() {
             
             <p style={{backgroundColor :"#97a1e8", fontSize:"20px", fontWeight:"bold"}} >Answer= {answer}</p>
             
+            <h2>You have been on this page: {timer} seconds</h2>
         </div>
         
     )
