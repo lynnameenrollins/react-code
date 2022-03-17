@@ -20,8 +20,9 @@ ReactDOM.render(
     {/* <NewClassComponent/>
     <TodoComponent name = 'Carol' />
     <MyFuncComponent name = 'Mike' age = {27}/> */}
-    <MyCalculator />
-    <MyCalculatorFunction/>
+    {/* <MyCalculator />
+    <MyCalculatorFunction/> */}
+    <App/>
     {/* <Demo/>
     <EffectHookExample/>
     <EffectNew/> */}

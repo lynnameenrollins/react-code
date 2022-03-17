@@ -1,0 +1,22 @@
+.demo1{
+    background-color: rgb(23, 0, 128);
+    color: white;
+  }
+
+  .UseRef{
+    background-color: purple;
+    color: white;  
+  }
+
+  .Component1{
+    background-color:lightgray;
+    color:rgb(7, 7, 7);   
+  }
+  .ContextP{
+    background-color:rgb(157, 211, 152);
+    color:rgb(7, 7, 7);   
+  }
+  .WOContextP{
+    background-color:rgb(58, 170, 185);
+    color:rgb(7, 7, 7);   
+  }
