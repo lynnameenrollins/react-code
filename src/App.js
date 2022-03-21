@@ -6,8 +6,18 @@ import CommonStyles from './component/CommonStyles';
 import Component1 from './component/Component1';
 import UseRefDemo from './component/UseRefDemo';
 import Component1Context from './component/Component1Context';
+import FirstComponent from './component/FirstComponent';
+import ParentToChild from './component/ParentToChild';
+import Child2 from './component/Child2';
+import Child1 from './component/Child1';
+import {useState} from 'react'
+import TwoWayBind from './component/TwoWayBind';
+import Form from './component/Form';
+import DisplayForm from './component/DisplayForm';
 // import Component1Context from './component/Component1Context';
 function App() {
+  // const [selectedMessage, setMessage] = useState('')
+  const [setInfo, displayInfo] = useState('')
   return (
     <div className="App">
       {/* <header className="App-header"></header> */}
@@ -23,10 +33,10 @@ function App() {
         >
           Learn React! It is fun!!
         </a> */}
-        <h1> Hello world from React</h1>
         <div>
+          <h1>Please fill out the Form and Submit when Finished</h1>
           {/* This demo is inheriting the css of App as well!! */}
-        <Demo/>
+        {/* <Demo/>
         <StyledDemo/>
         <CommonStyles/>
         <p>Example of Use Reference</p>
@@ -34,7 +44,14 @@ function App() {
         
         <Component1 />
         
-        <Component1Context/>
+        <Component1Context/> */}
+        {/* <FirstComponent/>
+        <ParentToChild/> */}
+        {/* <Child2 selectedMessage = {selectedMessage} />
+        <Child1 setMessage = {setMessage}/> */}
+        {/* <TwoWayBind/> */}
+        <Form/>
+          
         
         </div>
     </div>
