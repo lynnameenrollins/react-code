@@ -7,8 +7,8 @@ function Form({setInfo}) {
     const[lastName, setLastName] = useState('');
     const[age, setAge] = useState('');
     const[address, setAddress] = useState('');
-    const[hobbies, setHobbies] = useState('')
-    const [data, setData] = useState('');
+    const[hobbies, setHobbies] = useState([])
+    const [data, setData] = useState([]);
     var result= [];
     const firstNameChange = (e) => {
        setFirstName(e.target.value);
@@ -23,28 +23,20 @@ function Form({setInfo}) {
         setAddress(e.target.value);
      }
      const hobbiesChange = (e) => {
-        result.push(e.target.value);
-        
-        console.log('hobbies: ' + result);
-        setHobbies(result);
+        // hobbies.push(e.target.value);
+        const values = [...e.target.selectedOptions].map(opt => opt.value);
+        console.log(values);
+        setHobbies(values);
      }
      //this sending to child of Form
      const setFormInfo =() =>{
-        //  setData({
-        //      firstName: firstName,
-        //      lastName: lastName,
-        //      age: age,
-        //      address: address,
-        //      hobbies: hobbies});
-        setData(`Thank you for filling out the form.  
-        Please confirm the information is correct. 
-        First Name: ${firstName}
-        Last Name: ${lastName} 
-        Age: ${age} 
-        Address: ${address}
-        Hobbies: ${hobbies}`
-         );
-    }
+         setData({
+             fn:firstName, 
+             ln:lastName, 
+             age: age, 
+             adr: address, 
+             hobby: hobbies});}
+         
     return (
         <div>
             <label>First Name: </label>
@@ -75,7 +67,8 @@ function Form({setInfo}) {
             </select>
            <br></br>
            <DisplayForm data = {data}/>
-            <button onClick={()=>setFormInfo()}> Submit</button>
+           
+           <button onClick={()=>setFormInfo()}> Submit</button>
             <br></br>
             
            
