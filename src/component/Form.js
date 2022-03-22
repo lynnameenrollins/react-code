@@ -9,7 +9,7 @@ function Form({setInfo}) {
     const[address, setAddress] = useState('');
     const[hobbies, setHobbies] = useState([])
     const [data, setData] = useState([]);
-    var result= [];
+    
     const firstNameChange = (e) => {
        setFirstName(e.target.value);
     }
@@ -26,7 +26,7 @@ function Form({setInfo}) {
         // hobbies.push(e.target.value);
         const values = [...e.target.selectedOptions].map(opt => opt.value);
         console.log(values);
-        setHobbies(values);
+        setHobbies(values);        
      }
      //this sending to child of Form
      const setFormInfo =() =>{
@@ -58,14 +58,15 @@ function Form({setInfo}) {
             <label for="hobbies"> Hobbies (hold Ctrl to select multiple):</label>
             <br></br>
             <select id="myHobbies" multiple onChange={hobbiesChange}>
-                <option value = "running">Running</option>
-                <option value = "climbing">Climbing</option>
-                <option value = "reading">Reading</option>
-                <option value = "music">Music</option>
-                <option value = "cooking">Cooking</option>
-                <option value = "painting">Painting</option>
+                <option value = "Running, ">Running</option>
+                <option value = "Climbing, ">Climbing</option>
+                <option value = "Reading, ">Reading</option>
+                <option value = "Music, ">Music</option>
+                <option value = "Cooking, ">Cooking</option>
+                <option value = "Painting, ">Painting</option>
             </select>
            <br></br>
+           
            <DisplayForm data = {data}/>
            
            <button onClick={()=>setFormInfo()}> Submit</button>
