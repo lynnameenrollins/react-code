@@ -23,6 +23,8 @@ import About from './component/About';
 import Profile from './component/Profile';
 import Error from './component/Error';
 import Redirect from './component/Redirect';
+import Success from './component/Success'
+import Failure from './component/Failure';
 
 
 // import Component1Context from './component/Component1Context';
@@ -31,6 +33,7 @@ function App() {
   const [setInfo, displayInfo] = useState('')
   const [user,changeUser] = useState('userA');
   const numbers = [1,2,3,4,5];
+ 
   return (
     <div className="App">
       {/* <header className="App-header"></header> */}
@@ -62,7 +65,7 @@ function App() {
         {/* <Child2 selectedMessage = {selectedMessage} />
         <Child1 setMessage = {setMessage}/> */}
         {/* <TwoWayBind/> */}
-        <Form/>
+        
         {/* <DynamicContent user = {user}/>
         <button onClick={() => changeUser("userA")}>Switch to User A</button> 
         <button onClick={() => changeUser("userB")}>Switch to User B</button>  */}
@@ -70,24 +73,29 @@ function App() {
         {/* <NumberList numbers = {numbers}/> */}
 
         {/* whatever I put in here will become my link to take me to a different page   */}
-        {/* <Router>
-          <nav>
+        {/* This makes it the landing page */}
+        <Router>
+          {/* <nav>
             <ul>
-            {/* This makes it the landing page */}
-                {/* <li><Link to = "/home">Home Page</Link></li>
+            
+                <li><Link to = "/home">Home Page</Link></li>
                 <li><Link to = "/about">About Page</Link></li>
                 <li><Link to = "/profile">Profile Page</Link></li>
             </ul>
           </nav> */}
                  
-        {/* // <Routes>
-        //   <Route path ="/home" element= {<Home />}></Route>
-        //   <Route path ="/about" element= {<About />}></Route>
-        //   <Route path ="/profile" element= {<Profile />}></Route>
-        //   <Route path ="*" element= {<Error />}></Route>
-        // </Routes>
-        // <Redirect/>
-        // </Router>  */} 
+        <Routes>
+          <Route path ="/home" element= {<Home/>}></Route>
+          <Route path ="/about" element= {<About />}></Route>
+          <Route path ="/profile" element= {<Profile />}></Route>
+          <Route path ="/success" element= {<Success />}></Route>
+          <Route path ="/failure" element= {<Failure />}></Route>
+          <Route path ="*" element= {<Error />}></Route>
+        </Routes>
+        
+        </Router> 
+
+        {/* <Form/> */}
         </div>
     </div>
   );
