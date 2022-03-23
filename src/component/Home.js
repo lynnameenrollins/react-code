@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {useNavigate} from 'react-router';
 
 
-
 function Home(props) {
     const [info, setInfo]= useState([])
     const[name, setName] = useState('');
@@ -18,7 +17,6 @@ function Home(props) {
 
     const nameChange = (e) => {
     setName(e.target.value);
-   
     }
     const passwordChange = (e) => {
      setPassword(e.target.value);
@@ -29,6 +27,7 @@ function Home(props) {
 
   const checkInfo =() =>{
     if (name == ValidName && password == ValidPassword && email == ValidEmail){
+       
         setValid(true)
         setData({
             name: name, 
@@ -71,7 +70,8 @@ function Home(props) {
             <input onChange={emailChange} value = {email}/>
             <br></br>
             <br></br>
-             <button onClick={checkInfo} >Sign In Here </button>         
+            
+            <button onClick={checkInfo} >Sign In Here </button>         
             <br></br>
             <br></br>
         </div>

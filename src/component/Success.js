@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router';
 
 
 
-function Success(props) {
+function Success({name}) {
     let navigate = useNavigate();
     
   
@@ -15,7 +15,7 @@ function Success(props) {
         
         <div style = {{backgroundColor:"#2e783c"}}>
             
-            <h1>Hello NAME, you are successfully logged in!</h1>
+            <h1>Hello {name}, you are successfully logged in!</h1>
             <br></br>
             <br></br>
             <button onClick={backtoSignIn}> Back to Sign In</button>

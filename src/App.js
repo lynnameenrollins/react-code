@@ -33,7 +33,7 @@ function App() {
   const [setInfo, displayInfo] = useState('')
   const [user,changeUser] = useState('userA');
   const numbers = [1,2,3,4,5];
- 
+  const name = "Lynn"
   return (
     <div className="App">
       {/* <header className="App-header"></header> */}
@@ -75,22 +75,23 @@ function App() {
         {/* whatever I put in here will become my link to take me to a different page   */}
         {/* This makes it the landing page */}
         <Router>
-          {/* <nav>
-            <ul>
+          <nav>
+          
+            {/* <ul>
             
                 <li><Link to = "/home">Home Page</Link></li>
                 <li><Link to = "/about">About Page</Link></li>
                 <li><Link to = "/profile">Profile Page</Link></li>
-            </ul>
-          </nav> */}
-                 
+            </ul> */}
+          </nav>
+        
         <Routes>
           <Route path ="/home" element= {<Home/>}></Route>
           <Route path ="/about" element= {<About />}></Route>
           <Route path ="/profile" element= {<Profile />}></Route>
-          <Route path ="/success" element= {<Success />}></Route>
+          <Route path ="/success" element= {<Success name= {name} />}></Route>
           <Route path ="/failure" element= {<Failure />}></Route>
-          <Route path ="*" element= {<Error />}></Route>
+          <Route path ="*" element= {<Home />}></Route>
         </Routes>
         
         </Router> 
