@@ -74,6 +74,7 @@ function App() {
 
         {/* whatever I put in here will become my link to take me to a different page   */}
         {/* This makes it the landing page */}
+        {/* <Form/> */}
         <Router>
           <nav>
           
@@ -89,14 +90,14 @@ function App() {
           <Route path ="/home" element= {<Home/>}></Route>
           <Route path ="/about" element= {<About />}></Route>
           <Route path ="/profile" element= {<Profile />}></Route>
-          <Route path ="/success" element= {<Success name= {name} />}></Route>
+          <Route path ="/success" element= {<Success name = {name} />}></Route>
           <Route path ="/failure" element= {<Failure />}></Route>
           <Route path ="*" element= {<Home />}></Route>
         </Routes>
         
         </Router> 
 
-        {/* <Form/> */}
+
         </div>
     </div>
   );
