@@ -62,7 +62,7 @@ function Home(props) {
             <br></br>
             
             <label>Password: </label>
-            <input onChange={passwordChange} value = {password}/>
+            <input type = "password" onChange={passwordChange} value = {password}/>
             <br></br>
             <br></br>
            
